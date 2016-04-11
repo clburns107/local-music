@@ -5,4 +5,9 @@ class EventsController < ApplicationController
     @events = Event.all
     render "index"
   end
+
+  def details
+    render "details"
+    @details = [params: id]
+  end
 end
