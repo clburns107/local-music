@@ -8,7 +8,7 @@ class EventsController < ApplicationController
 
   def details
     @name_check = ""
-    @events_on_this_day = Event.where(date: params[:id])
+    @events_on_this_day = Event.where(date: params[:date])
     render "details"
   end
 end

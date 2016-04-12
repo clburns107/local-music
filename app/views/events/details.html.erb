@@ -3,32 +3,16 @@
 
 Loop through all events on this day and display venue, bands, and time
 
-set variable to empty string
 <% @events_on_this_day.each do |event| %>
   <% if event.venue.name != @name_check %>
+    <p>
     <%= event.venue.name %>
     <%= event.band.name %>
-    <%= event.time.name %>
+    <%= event.time %>
+    </p>
   <% else %>
     <%= event.band.name %>
     <%= event.time %>
   <% end %>
+  <% event.venue.name == @name_check %>
 <% end %>
-
-
-
-
-
-
-
-
-  check to see if venue name == variable name
-  if not 
-  put venue name
-  put band name
-  put time
-  else put band name
-  put time
-
-  if event.venue.name is same as previous venue name skip it
-  else display it
