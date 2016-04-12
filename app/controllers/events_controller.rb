@@ -3,6 +3,7 @@
 class EventsController < ApplicationController
   def list
     @all_events = Event.all.order(:date)
+    @date_check = ""
     render "index"
   end
 

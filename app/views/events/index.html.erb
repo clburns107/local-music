@@ -3,14 +3,12 @@
 <p>Events are automatically sorted by date</p>
 <p>Clicking on a Venue name will take you to a details page for that event</p>
 <% @all_events.each do |event| %>
-  <a href="/events/details/<%= event.date %>"> 
-    <%= event.date %> <br>
-  </a>
+  <% if event.date != @date_check %>
+    <a href="/events/details/<%= event.date %>"> 
+      <%= event.date %> <br>
+    </a>
+  <% end %>
+  <% @date_check = event.date %>
 <% end %>
 
 
-Date - click me to see
-
-venue 
-event 
-time and bands

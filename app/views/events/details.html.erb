@@ -2,17 +2,16 @@
 <p>This page displays a list of details for the event that you clicked on, including venue information and band information</p>
 
 Loop through all events on this day and display venue, bands, and time
-
-<% @events_on_this_day.each do |event| %>
-  <% if event.venue.name != @name_check %>
-    <p>
-    <%= event.venue.name %>
-    <%= event.band.name %>
-    <%= event.time %>
-    </p>
-  <% else %>
-    <%= event.band.name %>
-    <%= event.time %>
+<p>
+  <% @events_on_this_day.each do |event| %>
+    <% if event.venue.name != @name_check %>
+      <br><%= event.venue.name %><br>
+      <%= event.band.name %> : 
+      <%= event.time %><br>
+    <% else %>
+      <%= event.band.name %> : 
+      <%= event.time %><br>
+    <% end %>
+    <% @name_check = event.venue.name %>
   <% end %>
-  <% @name_check = event.venue.name %>
-<% end %>
+</p>
