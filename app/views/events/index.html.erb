@@ -2,6 +2,15 @@
 <p>This page displays a list of all events for local omaha venues</p>
 <p>Events are automatically sorted by date</p>
 <p>Clicking on a Venue name will take you to a details page for that event</p>
-<% @events.each do |event| %>
-  <p> <%= event.venue_id.name %> </p>
+<% @all_events.each do |event| %>
+  <a href="/events/details/<%= event.date %>"> 
+    <%= event.date %> <br>
+  </a>
 <% end %>
+
+
+Date - click me to see
+
+venue 
+event 
+time and bands

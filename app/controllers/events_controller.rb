@@ -2,12 +2,13 @@
 
 class EventsController < ApplicationController
   def list
-    @events = Event.all
+    @all_events = Event.all.order(:date)
     render "index"
   end
 
   def details
+    @name_check = ""
+    @events_on_this_day = Event.where(date: params[:id])
     render "details"
-    @details = [params: id]
   end
 end
