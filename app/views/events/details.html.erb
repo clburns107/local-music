@@ -14,5 +14,5 @@ Loop through all events on this day and display venue, bands, and time
     <%= event.band.name %>
     <%= event.time %>
   <% end %>
-  <% event.venue.name == @name_check %>
+  <% @name_check = event.venue.name %>
 <% end %>
