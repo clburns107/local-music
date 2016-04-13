@@ -1,7 +1,7 @@
 <h1>All Events</h1>
 <p>This page displays a list of all events for local omaha venues</p>
 <p>Events are automatically sorted by date</p>
-<p>Clicking on a Venue name will take you to a details page for that event</p>
+<p>Clicking on a Date will take you to a details page for that event</p>
 <% @all_events.each do |event| %>
   <% if event.date != @date_check %>
     <a href="/events/details/<%= event.date %>"> 
