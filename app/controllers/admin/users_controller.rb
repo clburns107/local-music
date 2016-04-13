@@ -21,6 +21,8 @@ module Admin
         #check to see if user is logged in
         #if so destroy the session and direct to events/index
         #if not direct to login page
+        @all_events = Event.all.order(:date)
+        @date_check = ""
         render "events/index"
     end
   end
