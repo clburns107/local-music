@@ -37,3 +37,7 @@ as well as a link to its edit page.
         ><%= render_field attribute %></dd>
   <% end %>
 </dl>
+
+<div style="float:right;padding:50px 25px 30px 30px;">
+<%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "button") %>
+</div>
