@@ -16,5 +16,12 @@ module Admin
 
     # See https://administrate-docs.herokuapp.com/customizing_controller_actions
     # for more information
+
+    def logout
+        #check to see if user is logged in
+        #if so destroy the session and direct to events/index
+        #if not direct to login page
+        render "events/list"
+    end
   end
 end

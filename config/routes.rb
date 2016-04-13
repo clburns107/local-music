@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get "events/details/:date" => 'events#details'
   devise_for :users
   root to: "events#list"
+  get "user/logout" => 'users#logout'
 end
