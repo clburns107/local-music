@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
+  
   namespace :admin do
     resources :users
-resources :bands
-resources :events
-resources :venues
+    resources :bands
+    resources :events
+    resources :venues
 
-    root to: "users#index"
+    root to: "events#index"
   end
 
   get "events/list" => 'events#list'
   get "events/details/:date" => 'events#details'
   devise_for :users
-  root to: "users#home"
+  root to: "events#list"
 end
