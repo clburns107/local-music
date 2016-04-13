@@ -29,9 +29,7 @@ class UserDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :id,
     :email,
-    :encrypted_password,
     :reset_password_token,
   ]
 
@@ -43,14 +41,6 @@ class UserDashboard < Administrate::BaseDashboard
     :encrypted_password,
     :reset_password_token,
     :reset_password_sent_at,
-    :remember_created_at,
-    :sign_in_count,
-    :current_sign_in_at,
-    :last_sign_in_at,
-    :current_sign_in_ip,
-    :last_sign_in_ip,
-    :created_at,
-    :updated_at,
   ]
 
   # FORM_ATTRIBUTES
@@ -61,18 +51,13 @@ class UserDashboard < Administrate::BaseDashboard
     :encrypted_password,
     :reset_password_token,
     :reset_password_sent_at,
-    :remember_created_at,
-    :sign_in_count,
-    :current_sign_in_at,
-    :last_sign_in_at,
-    :current_sign_in_ip,
-    :last_sign_in_ip,
+
   ]
 
   # Overwrite this method to customize how users are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(user)
-  #   "User ##{user.id}"
-  # end
+  def display_resource(user)
+    "#{user.email}"
+  end
 end
