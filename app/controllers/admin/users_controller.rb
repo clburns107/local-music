@@ -21,7 +21,7 @@ module Admin
         #check to see if user is logged in
         #if so destroy the session and direct to events/index
         #if not direct to login page
-        render "events/list"
+        render "events/index"
     end
   end
 end
