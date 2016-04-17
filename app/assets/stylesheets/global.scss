@@ -1,25 +1,37 @@
-.header{
-  background-color: green;
-
+.page-cap{
+  background-color: black;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center
 }
-.week{
+
+.main{
+  background-color: black;
+  color: white;
+  font-family: Arial;
+}
+
+.nav-text{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 305px;
 
 }
 
 .day{
-  background-color: pink;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  border:solid red 1px;
-  height: 500px;
-
+  height: 610px;
+  position: relative;
 }
 
-.link-text{
-  transform: rotate(-90deg);
-  color: green;
-}
-
-.container{
-  border:solid red 1px;
+.weekday-text{
+  // transform: rotate(-90deg);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
 }
