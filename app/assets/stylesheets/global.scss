@@ -1,11 +1,22 @@
 .page-cap{
+  font-family: Arial;
   background-color: black;
   color: white;
-  text-align: center
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+  padding: 10px;
 }
 
-.subtext{
+.header_subtext{
   color: gray;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.footer_subtext{
+  color: gray;
+  font-size: 16px;
   font-weight: normal;
 }
 
@@ -13,6 +24,22 @@
   background-color: black;
   color: white;
   font-family: Arial;
+  position: relative;
+}
+
+.datebox{
+  padding: 10px;
+  text-align: center;
+  z-index: 1;
+  background-color: black;
+  opacity: 0.5;
+  position: relative;
+  top: 80px;
+}
+
+.datebox_text{
+  font-weight: bold;
+  font-size: 40px;
 }
 
 .nav-text{
@@ -32,10 +59,10 @@
   display: inline-block;
   transform: rotate(-90deg);
   color: white;
-  font-size: 100px;
+  font-size: 90px;
   font-weight: bold;
   position: absolute;
-  bottom: 20px;
+  bottom: 35px;
   width: 100%;
   text-align: left;
 }
