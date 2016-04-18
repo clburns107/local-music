@@ -1,9 +1,12 @@
 .page-cap{
   background-color: black;
   color: white;
-  padding-top: 20px;
-  padding-bottom: 20px;
   text-align: center
+}
+
+.subtext{
+  color: gray;
+  font-weight: normal;
 }
 
 .main{
@@ -20,7 +23,7 @@
 
 }
 
-.day{
+.section{
   height: 610px;
   position: relative;
 }
@@ -35,4 +38,36 @@
   bottom: 20px;
   width: 100%;
   text-align: left;
+}
+
+.main-section_color_navigation{
+
+}
+
+.main-section_color_monday{
+  background-color: #FF9800;
+}
+
+.main-section_color_tuesday{
+  background-color: #E91E63;
+}
+
+.main-section_color_wednesday{
+  background-color: #CDDC39;
+}
+
+.main-section_color_thursday{
+  background-color: #03A9F4;
+}
+
+.main-section_color_friday{
+  background-color: #FFC107;
+}
+
+.main-section_color_saturday{
+  background-color: #9C27B0;
+}
+
+.main-section_color_sunday{
+  background-color: #F44336;
 }
