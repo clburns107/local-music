@@ -1,16 +1,81 @@
-<h1>All Events</h1>
-<p>This page displays a list of all events for local omaha venues</p>
-<p>Events are automatically sorted by date</p>
-<p>Clicking on a Date will take you to a details page for that event</p>
-<% @all_events.each do |event| %>
-  <% if event.date != @date_check %>
-    <a href="/events/details/<%= event.date %>"> 
-      <%= event.date %> <br>
-    </a>
-  <% end %>
-  <% @date_check = event.date %>
-<% end %>
 
-<p>
-  <a href="/admin">Admin Login</a>
-</p>
+<div class="container page-cap">
+  <header class="header">
+    Local Live Music
+      <div class="header_subtext">Omaha's calendar for live music in immdiate and surrounding areas.</div>
+  </header>
+</div>
+
+<div class="container main">
+  <div class="datebox">
+    <div class="datebox_text">
+      May 2 - May 8 2016
+    </div>
+  </div>
+  <div class="row expanded">
+    <div class="large-1 columns section main-section_color_navigation">
+      <div class="nav-text">
+        <
+      </div>
+    </div>
+    <a href="/events/details/2016-05-02">
+      <div class="large-2 columns section main-section_color_monday">
+        <div class="weekday-text">
+          Monday
+        </div>
+      </div>
+    </a>
+    <a href="/events/details/2016-05-03">
+      <div class="large-2 columns section main-section_color_tuesday">
+        <div class="weekday-text">
+          Tuesday
+        </div>
+      </div>
+    </a>
+    <a href="/events/details/2016-05-04">
+      <div class="large-2 columns section main-section_color_wednesday">
+        <div class="weekday-text">
+          Wednesday
+        </div>
+      </div>
+    </a>
+    <a href="/events/details/2016-05-05">
+      <div class="large-2 columns section main-section_color_thursday">
+        <div class="weekday-text">
+          Thursday
+        </div>
+      </div>
+    </a>
+    <a href="/events/details/2016-05-06">
+      <div class="large-2 columns section main-section_color_friday">
+        <div class="weekday-text">
+          Friday
+        </div>
+      </div>
+    </a>
+    <a href="/events/details/2016-05-07">
+      <div class="large-2 columns section main-section_color_saturday">
+        <div class="weekday-text">
+          Saturday
+        </div>
+      </div>
+    </a>
+    <a href="/events/details/2016-05-08">
+      <div class="large-2 columns section main-section_color_sunday">
+        <div class="weekday-text">
+          Sunday
+        </div>
+      </div>
+    </a>
+    <div class="large-1 columns section main-section_color_navigation">
+      <div class="nav-text">
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container page-cap">
+  <footer class="footer">
+      <div class="footer_subtext">Product creation by Mark White. <br>Website design and creation by Courtney Burns.<br><a href="/admin">Admin Login</a></div>
+  </footer>
+</div>
