@@ -26,12 +26,13 @@
 }
 
 .weekday-text{
-  // transform: rotate(-90deg);
+  display: inline-block;
+  transform: rotate(-90deg);
   color: white;
-  font-size: 20px;
+  font-size: 100px;
   font-weight: bold;
   position: absolute;
-  bottom: 0px;
+  bottom: 20px;
   width: 100%;
-  text-align: center;
+  text-align: left;
 }
