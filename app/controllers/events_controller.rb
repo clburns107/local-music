@@ -22,6 +22,16 @@ class EventsController < ApplicationController
 
     @week_range_end = @week_range_start + 6
 
+    #get collection of events for week range
+    #for each object check each date
+      #if date.monday? == True
+       #store date in a monday variable
+      #elsif 
+        #date.tuesday? == True
+      #etc.
+
+    #use the date variable in ruby code for the links
+
     @monday = Date.new
     @tuesday = Date.new
     @wednesday = Date.new
@@ -38,28 +48,31 @@ class EventsController < ApplicationController
       elsif 
         day.date.tuesday? == true
         @tuesday = day.date
+      elsif 
+        day.date.wednesday? == true
+        @wednesday = day.date
+      elsif 
+        day.date.thursday? == true
+        @thursday = day.date
+      elsif 
+        day.date.friday? == true
+        @friday = day.date
+      elsif 
+        day.date.saturday? == true
+        @saturday = day.date
+      elsif 
+        day.date.sunday? == true
+        @sunday = day.date
       end
     end
-        
-        
-
-    #get collection of events for week range
-    #for each object check each date
-      #if date.monday? == True
-       #store date in a monday variable
-      #elsif 
-        #date.tuesday? == True
-      #etc.
-
-    #use the date variable in ruby code for the links
-
-    @date_check = ""
+  
     render "index"
   end
 
   def details
     @name_check = ""
     @events_on_this_day = Event.where(date: params[:date])
+    
     render "details"
   end
 end

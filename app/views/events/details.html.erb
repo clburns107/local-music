@@ -3,16 +3,20 @@
 
 Loop through all events on this day and display venue, bands, and time
 <p>
-  <% @events_on_this_day.each do |event| %>
-    <% if event.venue.name != @name_check %>
-      <br><%= event.venue.name %><br>
-      <%= event.band.name %> : 
-      <%= event.time %><br>
-    <% else %>
-      <%= event.band.name %> : 
-      <%= event.time %><br>
+  <%if @events_on_this_day == [] %>
+    <%= "No events are scheduled for this day yet" %>
+  <% elsif %>
+    <% @events_on_this_day.each do |event| %>
+      <% if event.venue.name != @name_check %>
+        <br><%= event.venue.name %><br>
+        <%= event.band.name %> : 
+        <%= event.time %><br>
+      <% else %>
+        <%= event.band.name %> : 
+        <%= event.time %><br>
+      <% end %>
+      <% @name_check = event.venue.name %>
     <% end %>
-    <% @name_check = event.venue.name %>
   <% end %>
 </p>
 
