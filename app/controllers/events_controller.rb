@@ -10,7 +10,7 @@ class EventsController < ApplicationController
     #if today is not a monday subtracts by 1 day until monday is reached
     #adds six days to get sundays date
 
-    @todays_date = Date.today + 14
+    @todays_date = Date.today
     @week_range_start = @todays_date
     @week_range_end = Date.new
     @date_counter = 0
@@ -71,8 +71,11 @@ class EventsController < ApplicationController
 
   def details
     @name_check = ""
-    @events_on_this_day = Event.where(date: params[:date])
-    
+    if params[:date] != "-4712-01-01"
+      @events_on_this_day = Event.where(date: params[:date])
+    else
+      @events_on_this_day = nil
+    end
     render "details"
   end
 end
