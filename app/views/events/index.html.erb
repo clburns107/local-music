@@ -1,4 +1,3 @@
-
 <div class="container page-cap">
   <header class="header">
     Local Live Music
@@ -9,7 +8,7 @@
 <div class="container main">
   <div class="datebox">
     <div class="datebox_text">
-      May 2 - May 8 2016
+      <%= @week_range_start %> - <%= @week_range_end %><br>
     </div>
   </div>
   <div class="row expanded">
@@ -18,14 +17,14 @@
         <
       </div>
     </div>
-    <a href="/events/details/2016-05-02">
+    <a href="/events/details/<%= @monday %>">
       <div class="large-2 columns section main-section_color_monday">
         <div class="weekday-text">
           Monday
         </div>
       </div>
     </a>
-    <a href="/events/details/2016-05-03">
+    <a href="/events/details/<%= @tuesday %>">
       <div class="large-2 columns section main-section_color_tuesday">
         <div class="weekday-text">
           Tuesday
