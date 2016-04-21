@@ -8,7 +8,9 @@
 <div class="container main">
   <div class="datebox">
     <div class="datebox_text">
-      <%= @week_range_start %> - <%= @week_range_end %><br>
+      <%= @week_range_start.to_time.strftime('%B %e %Y')%> 
+      - 
+      <%= @week_range_end.to_time.strftime('%B %e %Y') %><br>
     </div>
   </div>
   <div class="row expanded">

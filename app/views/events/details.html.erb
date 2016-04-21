@@ -4,7 +4,7 @@
 Loop through all events on this day and display venue, bands, and time
 <p>
   <%if @events_on_this_day == nil %>
-    <%= "No events are scheduled for this day yet" %>
+    <p>No events are scheduled for this day yet.</p>
   <% elsif %>
     <% @events_on_this_day.each do |event| %>
       <% if event.venue.name != @name_check %>
@@ -21,5 +21,5 @@ Loop through all events on this day and display venue, bands, and time
 </p>
 
 <p>
-  <a href="/events/list">Calendar</a>
+  <a href="/">Calendar</a>
 </p>
