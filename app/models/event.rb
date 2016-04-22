@@ -4,5 +4,8 @@ class Event < ActiveRecord::Base
 
   require 'Date'
   
-
+  def self.this_week
+    puts 'class method'
+  end
+  
 end

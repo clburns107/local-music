@@ -7,7 +7,7 @@
 
 <div class="container main">
   <div class="datebox">
-    <div class="datebox_text">
+    <div id="date_range" class="datebox_text">
       <%= @week_range_start.to_time.strftime('%B %e %Y')%> 
       - 
       <%= @week_range_end.to_time.strftime('%B %e %Y') %><br>
@@ -15,7 +15,7 @@
   </div>
   <div class="row expanded">
     <div class="large-1 columns section main-section_color_navigation">
-      <div class="nav-text">
+      <div id="date_range_decrease" class="nav-text">
         <
       </div>
     </div>
@@ -69,7 +69,7 @@
       </div>
     </a>
     <div class="large-1 columns section main-section_color_navigation">
-      <div class="nav-text">
+      <div id="date_range_increase" class="nav-text">
         >
       </div>
     </div>

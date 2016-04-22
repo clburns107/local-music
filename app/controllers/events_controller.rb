@@ -78,4 +78,8 @@ class EventsController < ApplicationController
     end
     render "details"
   end
+
+  def lastweek
+    @message = "hi my name is courtney"
+  end
 end
