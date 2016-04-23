@@ -1,8 +1,6 @@
 # This file is for the controller actions ruby code that is to be ran when a specific path is requested
 
 class EventsController < ApplicationController
-  require 'Date'
-
 
   def list
     #to show correct week in header
